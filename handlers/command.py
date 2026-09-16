@@ -9,7 +9,8 @@ router = Router()
 # декоратор вызывает функцию command_start()
 @router.message(Command("start"))
 async def command_start(message: types.Message):
-    await message.answer("Hello",reply_markup=kb_1)
+    await message.answer("👋 Hello! Welcome to Help Desk.\n"
+        "Here you can create a support request and describe your issue.",reply_markup=kb_1)
 
 
 # Когда пользователь пишет /stop,
@@ -17,3 +18,6 @@ async def command_start(message: types.Message):
 @router.message(Command("stop"))
 async def command_stop(message: types.Message):
     await message.answer("Good Bye")
+
+
+
